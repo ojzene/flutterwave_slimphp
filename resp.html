@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
+<meta http-equiv=\"cache-control\" content=\"no-cache\" /><meta http-equiv=\"expires\" content=\"31 Dec 1997\" />
+<meta http-equiv=\"Pragma\" content=\"no-cache\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" /><title>Flutterwave Payment Gateway</title>
+<meta content=\"yes\" name=\"apple-mobile-web-app-capable\" />
+<meta content=\"black\" name=\"apple-mobile-web-app-status-bar-style\" />
+<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0\"/></head><body>
+<div class=\"waitmsg\" id=\"WaitMessage\" style=\"display:none\"><WaitMessage>Transaction Processing, Please Wait...</WaitMessage></div>
+
+<form id=\"mpiRun\" action=\"https://migs.mastercard.com.au/vpcpay\" method=\"post\">
+<input type=\"hidden\" name=\"vpc_AccessCode\" value=\"3E7DB883\" /> 
+<input type=\"hidden\" name=\"vpc_Amount\" value=\"10070\" /> 
+<input type=\"hidden\" name=\"vpc_CardExp\" value=\"1806\" /> 
+<input type=\"hidden\" name=\"vpc_CardNum\" value=\"5399232023567263\" /> 
+<input type=\"hidden\" name=\"vpc_CardSecurityCode\" value=\"049\" /> 
+<input type=\"hidden\" name=\"vpc_Command\" value=\"pay\" /> 
+<input type=\"hidden\" name=\"vpc_Currency\" value=\"NGN\" /> 
+<input type=\"hidden\" name=\"vpc_Locale\" value=\"en\" /> 
+<input type=\"hidden\" name=\"vpc_MerchTxnRef\" value=\"FLWT00478760\" /> 
+<input type=\"hidden\" name=\"vpc_Merchant\" value=\"FLVM01\" /> 
+<input type=\"hidden\" name=\"vpc_OrderInfo\" value=\"ODRFLWT00478760\" /> <input type=\"hidden\" name=\"vpc_ReturnAuthResponseData\" value=\"Y\" /> 
+<input type=\"hidden\" name=\"vpc_ReturnURL\" value=\"https://flutterwavestaging.com:9443/FlutterMigs/threepartytransaction\" /> 
+<input type=\"hidden\" name=\"vpc_Version\" value=\"1\" /> <input type=\"hidden\" name=\"vpc_card\" value=\"Mastercard\" /> 
+<input type=\"hidden\" name=\"vpc_gateway\" value=\"threeDSecure\" /> 
+<input type=\"hidden\" name=\"vpc_SecureHash\" value=\"981000E6706EB3CB6DC67FDE75AE99746C8EE3D336C1C9794901A6279CFD2585\" /> 
+<input type=\"hidden\" name=\"vpc_SecureHashType\" value=\"SHA256\" />       
+<br>      <br>
+<noscript>      
+<center>      
+<h1>Processing your 3-D Secure Transaction</h1>      
+<h2>      JavaScript is currently disabled or is not supported            by your browser.<br></h2>      
+<h3>Please click <b>< Submit ></b> to continue            the processing of your 3-D Secure            transaction.</h3>  
+<input type=\"submit\" />      
+</center>
+</noscript>
+</form>
+<script>  
+window.onload=function(){    
+	document.getElementById('WaitMessage').style.display='';    
+	document.getElementById('mpiRun').submit()    
+} 
+</script>
+</body>
+</html>

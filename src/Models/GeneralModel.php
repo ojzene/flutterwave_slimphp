@@ -29,6 +29,7 @@ class GeneralModel {
                 } elseif ($method == "GET") {
                     goto sendrequest;
                 }
+
                 sendrequest:    $response = $client->send($request);
                                 $json = $response->json();
                                 return $json;

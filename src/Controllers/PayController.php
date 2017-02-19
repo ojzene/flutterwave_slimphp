@@ -55,62 +55,142 @@ class PayController
 
    	public function cardToAccount(Request $request, Response $response, $args)
    	{
-   		$resp = (new GeneralModel)->try_get($request, $response, $this->method_names, 2, self::OUTPUT_FORMAT);
-		return $resp;
+        $req_res = [$request, $response];
+        $method_identity = $this->method_names;
+        if($method_identity['status'] == true) {
+            $resp = (new GeneralModel)->try_get($req_res, $method_identity['message'], 2, $this->output_format, $args);
+            return $resp;
+        } elseif($method_identity['status'] == false) {
+            return $response->withHeader('Content-Type', 'application/json')
+                ->withJson($method_identity)
+                ->withStatus(400);
+        }
    	}
 
    	public function cardToWallet(Request $request, Response $response, $args)
    	{
-   		$resp = (new GeneralModel)->try_get($request, $response, $this->method_names, 3, self::OUTPUT_FORMAT);
-		return $resp;
+        $req_res = [$request, $response];
+        $method_identity = $this->method_names;
+        if($method_identity['status'] == true) {
+            $resp = (new GeneralModel)->try_get($req_res, $method_identity['message'], 3, $this->output_format, $args);
+            return $resp;
+        } elseif($method_identity['status'] == false) {
+            return $response->withHeader('Content-Type', 'application/json')
+                ->withJson($method_identity)
+                ->withStatus(400);
+        }
    	}
 
    	public function totalChargeToCard(Request $request, Response $response, $args)
    	{
-   		$resp = (new GeneralModel)->try_get($request, $response, $this->method_names, 4, self::OUTPUT_FORMAT);
-		return $resp;
+        $req_res = [$request, $response];
+        $method_identity = $this->method_names;
+        if($method_identity['status'] == true) {
+            $resp = (new GeneralModel)->try_get($req_res, $method_identity['message'], 4, $this->output_format, $args);
+            return $resp;
+        } elseif($method_identity['status'] == false) {
+            return $response->withHeader('Content-Type', 'application/json')
+                ->withJson($method_identity)
+                ->withStatus(400);
+        }
    	}
 
    	public function walletToAccountSingle(Request $request, Response $response, $args)
    	{
-   		$resp = (new GeneralModel)->try_get($request, $response, $this->method_names, 5, self::OUTPUT_FORMAT);
-		return $resp;
+        $req_res = [$request, $response];
+        $method_identity = $this->method_names;
+        if($method_identity['status'] == true) {
+            $resp = (new GeneralModel)->try_get($req_res, $method_identity['message'], 5, $this->output_format, $args);
+            return $resp;
+        } elseif($method_identity['status'] == false) {
+            return $response->withHeader('Content-Type', 'application/json')
+                ->withJson($method_identity)
+                ->withStatus(400);
+        }
    	}
 
    	public function walletToAccountBulk(Request $request, Response $response, $args)
    	{
-   		$resp = (new GeneralModel)->try_get($request, $response, $this->method_names, 6, self::OUTPUT_FORMAT);
-		return $resp;
+        $req_res = [$request, $response];
+        $method_identity = $this->method_names;
+        if($method_identity['status'] == true) {
+            $resp = (new GeneralModel)->try_get($req_res, $method_identity['message'], 6, $this->output_format, $args);
+            return $resp;
+        } elseif($method_identity['status'] == false) {
+            return $response->withHeader('Content-Type', 'application/json')
+                ->withJson($method_identity)
+                ->withStatus(400);
+        }
    	}
 
    	public function accountNumberValidate(Request $request, Response $response, $args)
    	{
-   		$resp = (new GeneralModel)->try_get($request, $response, $this->method_names, 7, self::OUTPUT_FORMAT);
-		return $resp;
+        $req_res = [$request, $response];
+        $method_identity = $this->method_names;
+        if($method_identity['status'] == true) {
+            $resp = (new GeneralModel)->try_get($req_res, $method_identity['message'], 7, $this->output_format, $args);
+            return $resp;
+        } elseif($method_identity['status'] == false) {
+            return $response->withHeader('Content-Type', 'application/json')
+                ->withJson($method_identity)
+                ->withStatus(400);
+        }
    	}
 
    	public function failedTransactionRetry(Request $request, Response $response, $args)
    	{
-   		$resp = (new GeneralModel)->try_get($request, $response, $this->method_names, 8, self::OUTPUT_FORMAT);
-		return $resp;
+        $req_res = [$request, $response];
+        $method_identity = $this->method_names;
+        if($method_identity['status'] == true) {
+            $resp = (new GeneralModel)->try_get($req_res, $method_identity['message'], 8, $this->output_format, $args);
+            return $resp;
+        } elseif($method_identity['status'] == false) {
+            return $response->withHeader('Content-Type', 'application/json')
+                ->withJson($method_identity)
+                ->withStatus(400);
+        }
    	}
 
    	public function transCardToAccount(Request $request, Response $response, $args)
    	{
-   		$resp = (new GeneralModel)->try_get($request, $response, $this->method_names, 9, self::OUTPUT_FORMAT);
-		return $resp;
+        $req_res = [$request, $response];
+        $method_identity = $this->method_names;
+        if($method_identity['status'] == true) {
+            $resp = (new GeneralModel)->try_get($req_res, $method_identity['message'], 9, $this->output_format, $args);
+            return $resp;
+        } elseif($method_identity['status'] == false) {
+            return $response->withHeader('Content-Type', 'application/json')
+                ->withJson($method_identity)
+                ->withStatus(400);
+        }
    	}
 
    	public function transWalletToAccount(Request $request, Response $response, $args)
    	{
-   		$resp = (new GeneralModel)->try_get($request, $response, $this->method_names, 10, self::OUTPUT_FORMAT);
-		return $resp;
+        $req_res = [$request, $response];
+        $method_identity = $this->method_names;
+        if($method_identity['status'] == true) {
+            $resp = (new GeneralModel)->try_get($req_res, $method_identity['message'], 10, $this->output_format, $args);
+            return $resp;
+        } elseif($method_identity['status'] == false) {
+            return $response->withHeader('Content-Type', 'application/json')
+                ->withJson($method_identity)
+                ->withStatus(400);
+        }
    	}
 
    	public function walletBalance(Request $request, Response $response, $args)
    	{
-   		$resp = (new GeneralModel)->try_get($request, $response, $this->method_names, 11, self::OUTPUT_FORMAT);
-		return $resp;
+        $req_res = [$request, $response];
+        $method_identity = $this->method_names;
+        if($method_identity['status'] == true) {
+            $resp = (new GeneralModel)->try_get($req_res, $method_identity['message'], 11, $this->output_format, $args);
+            return $resp;
+        } elseif($method_identity['status'] == false) {
+            return $response->withHeader('Content-Type', 'application/json')
+                ->withJson($method_identity)
+                ->withStatus(400);
+        }
    	}
 
 }

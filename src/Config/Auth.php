@@ -9,7 +9,9 @@ class Auth
 
     public function __construct()
     {
-        $this->token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgzLCJuYW1lIjoiRmV0Y2hyIiwiYWNjb3VudE51bWJlciI6IiIsImJhbmtDb2RlIjoiOTk5IiwiaXNBY3RpdmUiOnRydWUsImNyZWF0ZWRBdCI6IjIwMTYtMTItMzFUMDM6MjE6NTMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMTYtMTItMzFUMDM6MjI6MzEuMDAwWiIsImRlbGV0ZWRBdCI6bnVsbCwiaWF0IjoxNDg2MDQ2NTQwLCJleHAiOjE0ODYwNTM3NDB9.timR6KlP_7CAAPk1TlclTcpLMFaltF97tKsGdi9LKmc";
+        $this->apiKey = "ts_AXQS7B8FE8OMT4QN8PX7";
+        $this->secret = "ts_QOY2S2C8M3RNQ75O94UD39QM37Z2MN";
+        $this->token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgzLCJuYW1lIjoiRmV0Y2hyIiwiYWNjb3VudE51bWJlciI6IiIsImJhbmtDb2RlIjoiOTk5IiwiaXNBY3RpdmUiOnRydWUsImNyZWF0ZWRBdCI6IjIwMTYtMTItMzFUMDM6MjE6NTMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMTYtMTItMzFUMDM6MjI6MzEuMDAwWiIsImRlbGV0ZWRBdCI6bnVsbCwiaWF0IjoxNDg3NTIzMTIyLCJleHAiOjE0ODc1MzAzMjJ9.VHGpmH29yu6oqPPbdi8rD4zni5IB-P7xMqvSkTYTXeg";
 
         $this->moneywave_staging_url = 'http://moneywave.herokuapp.com/';
         $this->moneywave_test_url = 'https://moneywave.flutterwave.com/';

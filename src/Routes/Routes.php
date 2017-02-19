@@ -17,7 +17,9 @@ if ($mode == 'production' || $mode == 'debug')
         $app->post('/transfer/disburse/retry', 'PayController:failedTransactionRetry');
         $app->post('/transfer/{id}', 'PayController:transCardToAccount');
         $app->post('/disburse/status', 'PayController:transWalletToAccount');
-        $app->get('/wallet', 'PayController:walletBalance'); 
+        $app->get('/wallet', 'PayController:walletBalance');
+
+        $app->get('/redirectpage', 'PayController:getBanks');
 
     });
 }

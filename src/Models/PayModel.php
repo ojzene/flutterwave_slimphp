@@ -68,8 +68,8 @@ class PayModel
 				"expiry_year" => (string)$input["expiry_year"],
 				"expiry_month" => (string)$input["expiry_month"],
 				"apiKey" => (string)$input["apiKey"],
-				"amount" => (string)$input["amount"],
-				"fee" => (string)$input["fee"],
+				"amount" => (int)$input["amount"],
+				"fee" => (int)$input["fee"],
 				"redirecturl" => (string)$input["redirecturl"],
 				"medium" =>  (string)$input["medium"]
 			];
@@ -78,7 +78,8 @@ class PayModel
 			$parsed_url = (new Auth)->moneywave_staging_url."v1/transfer";
 			$token = (new Auth)->token;
 			$json =  (new GeneralModel)->make_guzzle_request($parsed_url, "POST", $token, $body);
-			if(is_int($json)) {
+
+            if(is_int($json)) {
 				$result = ['status' => 'error', 'message' => 'Error in request/response'];
 			} 
 			else {
@@ -99,8 +100,7 @@ class PayModel
 				"lastname" => (string)$input["lastname"],
 				"phonenumber" => (string)$input["phonenumber"],
 				"email" => (string)$input["email"],
-				"recipient_bank" => (string)$input["recipient_bank"],
-				"recipient_account_number" => (string)$input["recipient_account_number"],
+				"recipient" => (string)$input["recipient"],
 				"card_no" => (string)$input["card_no"],
 				"cvv" => (string)$input["cvv"],
 				"expiry_year" => (string)$input["expiry_year"],

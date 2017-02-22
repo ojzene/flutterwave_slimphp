@@ -1,5 +1,5 @@
 <?php
-	require '../../vendor/autoload.php';
+    require '../../vendor/autoload.php';
     use App\Config\Configuration;
     set_include_path('../../src');
     $mode = "debug"; // this could be production or debug or maintenance
@@ -9,7 +9,6 @@
     require '../Config/Database.php';
     require '../Config/RedisDatabase.php';
     require '../Config/Auth.php';
-    //require '../Zend/XmlRpc/Client.php';
-	require '../Config/Dependencies.php';
-	require '../Routes/Routes.php';
-	$app->run();
+    require '../Config/Dependencies.php';
+    require '../Routes/Routes.php';
+    $app->run();

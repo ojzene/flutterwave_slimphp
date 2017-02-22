@@ -1,7 +1,4 @@
 <?php
-	// use \App\Validation\Validation as Validation;
-	// use \App\Validation\SkuValidation as sk;
-
 if ($mode == 'production' || $mode == 'debug')
 {
     $app->group('/v1', function () use ($app){

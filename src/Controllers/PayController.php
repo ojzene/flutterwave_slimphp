@@ -9,10 +9,7 @@ use App\Models\GeneralModel;
 use App\Config\Auth;
 
 class PayController
-{
-	// const OUTPUT_FORMAT = "xml"; 
-	// const OUTPUT_FORMAT_JSON = "json";
-	
+{	
 	protected $container;
  	
  	public function __construct($container)
@@ -21,16 +18,6 @@ class PayController
         $this->output_format = (new Auth)->output_format;
     	$this->method_names = (new GeneralModel)->get_model_methods("PayModel");
    	}
-
-//   	private function getSubscriber(Request $request)  // get subscriber data from loan manager
-//   	{
-//   		$headers = $request->getHeaders();
-//        $client_ids = new ClientIDValidation();
-//        $get_result['error'] = $client_ids->getHeader($headers);
-//        $get_result['client_id'] = $client_ids->getClientID($get_result['error']);
-//
-//   		return $get_result;
-//   	}
 
    	public function getBanks(Request $request, Response $response, $args)
    	{

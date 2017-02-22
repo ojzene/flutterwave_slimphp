@@ -5,12 +5,9 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 use \App\Statuses\Statuses;
 use Respect\Validation\Validator as v;
-//use \App\Jasny\ISO\Countries as Country;
 use RedBeanPHP\R;
-
 use App\Config\Auth;
-
-// use App\Models\GeneralModel;
+use App\Models\GeneralModel;
 
 class PayModel 
 {
@@ -200,7 +197,7 @@ class PayModel
 			];
 
 			 // {
-		     //    "lock":"notice2011",
+		     //    "lock":"mypassword",
 			 // "recipients": [
 			 //     {
 			 //        "amount":100,
@@ -358,6 +355,4 @@ class PayModel
 		}
 		return $result;
 	}
-
-
 }

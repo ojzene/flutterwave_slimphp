@@ -32,7 +32,6 @@ use App\Statuses\Statuses;
                 };
             };
 
-
             $container['errorHandler'] = function ($c) {
                 return function ($request, $response) use ($c) {
                     $status_code = 6001;
@@ -44,7 +43,6 @@ use App\Statuses\Statuses;
                         ->withJson($resultHandler);
                 };
             };
-
 
             $container['notAllowedHandler'] = function ($c) {
                 return function ($request, $response) use ($c) {
@@ -72,15 +70,6 @@ use App\Statuses\Statuses;
         }
     }
 
-
     $container['PayController'] = function ($container) {
         return new \App\Controllers\PayController($container);
     };
-
-    // $container['SkuController'] = function ($container) {
-    //     return new \App\Controllers\SkuController($container);
-    // };
-
-    // $container['ShipmentsController'] = function ($container) {
-    //     return new \App\Controllers\ShipmentsController($container);
-    // };

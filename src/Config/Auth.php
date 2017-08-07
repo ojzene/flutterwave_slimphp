@@ -9,9 +9,9 @@ class Auth
 
     public function __construct()
     {
-        $this->apiKey = "ts_AXQS7B8FE8OMT4QN8PX7";
-        $this->secret = "ts_QOY2S2C8M3RNQ75O94UD39QM37Z2MN";
-        $this->token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgzLCJuYW1lIjoiRmV0Y2hyIiwiYWNjb3VudE51bWJlciI6IiIsImJhbmtDb2RlIjoiOTk5IiwiaXNBY3RpdmUiOnRydWUsImNyZWF0ZWRBdCI6IjIwMTYtMTItMzFUMDM6MjE6NTMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMTYtMTItMzFUMDM6MjI6MzEuMDAwWiIsImRlbGV0ZWRBdCI6bnVsbCwiaWF0IjoxNDg3NTIzMTIyLCJleHAiOjE0ODc1MzAzMjJ9.VHGpmH29yu6oqPPbdi8rD4zni5IB-P7xMqvSkTYTXeg";
+        $this->apiKey = "put_api_key_here";
+        $this->secret = "put_secret_key_here";
+        $this->token = "put_generated_token_here";
 
         $this->moneywave_staging_url = 'http://moneywave.herokuapp.com/';
         $this->moneywave_test_url = 'https://moneywave.flutterwave.com/';
